@@ -26,6 +26,7 @@ import android.telephony.TelephonyManager;
 
 import android.util.Log;
 import com.android.internal.telephony.TelephonyIntents;
+import com.cyanogenmod.setupwizard.R; 
 import com.cyanogenmod.setupwizard.util.SetupWizardUtils;
 
 import java.util.ArrayList;
