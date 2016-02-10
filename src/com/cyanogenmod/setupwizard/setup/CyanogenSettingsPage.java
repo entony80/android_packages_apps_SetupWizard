@@ -52,7 +52,6 @@ import com.cyanogenmod.setupwizard.SetupWizardApp;
 import com.cyanogenmod.setupwizard.cmstats.SetupStats;
 import com.cyanogenmod.setupwizard.ui.SetupPageFragment;
 import com.cyanogenmod.setupwizard.util.SetupWizardUtils;
-import com.cyanogenmod.setupwizard.util.WhisperPushUtils;
 
 import cyanogenmod.providers.CMSettings;
 
@@ -68,7 +67,7 @@ public class CyanogenSettingsPage extends SetupPage {
     public static final String KEY_ENABLE_NAV_KEYS = "enable_nav_keys";
     public static final String KEY_APPLY_DEFAULT_THEME = "apply_default_theme";
 
-    public static final String CRDROID_COMMUNITY_URI ="https://plus.google.com/u/0/communities/108415691944011221314?utm_source=chrome_ntp_icon&utm_medium=chrome_app&utm_campaign=chrome";
+    public static final String CYANPOP_COMMUNITY_URI ="https://plus.google.com/u/0/communities/108415691944011221314?utm_source=chrome_ntp_icon&utm_medium=chrome_app&utm_campaign=chrome";
 
     public CyanogenSettingsPage(Context context, SetupDataCallbacks callbacks) {
         super(context, callbacks);
@@ -94,7 +93,7 @@ public class CyanogenSettingsPage extends SetupPage {
 
     @Override
     public int getTitleResId() {
-        return R.string.setup_crdroid_services;
+        return R.string.setup_cyanpop_services;
     }
 
     private static void writeDisableNavkeysOption(Context context, boolean enabled) {
@@ -214,14 +213,14 @@ public class CyanogenSettingsPage extends SetupPage {
         @Override
         protected void initializePage() {
 
-            String crdroid_community = getString(R.string.crdroid_community);
-            String crdroidSummary = getString(R.string.general_explanation, crdroid_community);
-            SpannableString ss = new SpannableString(crdroidSummary);
+            String cyanpop_community = getString(R.string.cyanpop_community);
+            String cyanpopSummary = getString(R.string.general_explanation, cyanpop_community);
+            SpannableString ss = new SpannableString(cyanpopSummary);
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
                 public void onClick(View textView) {
                     final Intent intent = new Intent(SetupWizardApp.ACTION_VIEW_LEGAL);
-                    intent.setData(Uri.parse(CRDROID_COMMUNITY_URI));
+                    intent.setData(Uri.parse(CYANPOP_COMMUNITY_URI));
                     try {
                         getActivity().startActivity(intent);
                     } catch (Exception e) {
@@ -230,9 +229,9 @@ public class CyanogenSettingsPage extends SetupPage {
                 }
             };
             ss.setSpan(clickableSpan,
-                    crdroidSummary.length() - crdroid_community.length() - 1,
-                    crdroidSummary.length() - 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            TextView privacyPolicy = (TextView) mRootView.findViewById(R.id.crdroid_community);
+                    cyanpopSummary.length() - cyanpop_community.length() - 1,
+                    cyanpopSummary.length() - 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            TextView privacyPolicy = (TextView) mRootView.findViewById(R.id.cyanpop_community);
             privacyPolicy.setMovementMethod(LinkMovementMethod.getInstance());
             privacyPolicy.setText(ss);
 
