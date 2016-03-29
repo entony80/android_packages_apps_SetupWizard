@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="setup_cyanpop_services">Info su CyanPop</string>
+
+    <string name="cyanpop_community">CyanPop Google Plus Community</string>
+
+    <string name="general_explanation" product="tablet">CyanPOP è una ROM personalizzata. Iniziato con il Moto G 2014 LTE, ora stiamo sostenendo altri dispositivi. <xliff:g id="name" example="CyanPop Google Plus Community">%s</xliff:g>.</string>
+
+    <string name="general_explanation" product="default">CyanPOP è una ROM personalizzata. Iniziato con il Moto G 2014 LTE, ora stiamo sostenendo altri dispositivi. <xliff:g id="name" example="CyanPop Google Plus Community">%s</xliff:g>.</string>
+
+</resources>
